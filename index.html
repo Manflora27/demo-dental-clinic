@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Brightwater Family Dental (Demo) | Fictional business website by Manel Terrible</title>
+<meta name="description" content="Demo project: a website for a fictional neighborhood dental clinic, built by freelance web developer Manel Terrible. Not a real business.">
+<meta name="robots" content="index, follow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Nunito+Sans:wght@400;600;700&display=swap">
+<style>
+:root{
+  --bg:#F5FAF9; --card:#FFFFFF; --ink:#13302E; --muted:#4E6866; --line:#D3E4E1;
+  --accent:#0E7C74; --accent-ink:#FFFFFF; --soft:#E2F2EF; --warn-bg:#FFF4D6; --warn-ink:#5A4300;
+  --display:"Fraunces", Georgia, "Times New Roman", serif;
+  --body:"Nunito Sans", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --r:12px;
+}
+@media (prefers-color-scheme: dark){
+  :root{ --bg:#0E1A19; --card:#152523; --ink:#E4F1EF; --muted:#9BB7B3; --line:#24403C;
+    --accent:#4FC4B9; --accent-ink:#06201D; --soft:#18322F; --warn-bg:#3A2F0E; --warn-ink:#FFE7A3; color-scheme:dark; }
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 var(--body)}
+a{color:var(--accent)}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+h1,h2,h3{font-family:var(--display);line-height:1.15;margin:0;text-wrap:balance}
+p{margin:0}
+.wrap{max-width:1040px;margin:0 auto;padding-inline:20px}
+.demo-bar{background:var(--warn-bg);color:var(--warn-ink);font-size:14.5px;text-align:center;padding:10px 16px;font-weight:600}
+.demo-bar a{color:inherit}
+header{border-bottom:1px solid var(--line);background:var(--card)}
+header .wrap{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-block:14px;flex-wrap:wrap}
+.logo{font-family:var(--display);font-weight:700;font-size:21px;color:var(--ink);text-decoration:none}
+.logo span{color:var(--accent)}
+nav{display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+nav a{color:var(--ink);text-decoration:none;font-weight:600;font-size:15px}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-ink);border:0;border-radius:999px;padding:12px 20px;font:700 15px/1 var(--body);text-decoration:none;cursor:pointer}
+.btn.ghost{background:transparent;color:var(--ink);border:2px solid var(--ink)}
+@media (max-width:620px){nav a:not(.btn){display:none}}
+.hero{display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center;padding-block:56px}
+.hero>*{min-width:0}
+.hero h1{font-size:clamp(34px,5.5vw,54px)}
+.hero p.lede{margin-top:16px;color:var(--muted);font-size:19px;max-width:40ch}
+.hero .acts{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
+.quick{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:22px;display:grid;gap:12px}
+.quick b{font-family:var(--display);font-size:20px}
+.quick dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:6px 14px;font-size:15.5px}
+.quick dt{color:var(--muted)}
+.quick dd{margin:0}
+@media (max-width:760px){.hero{grid-template-columns:1fr;padding-block:40px}}
+section{padding-block:52px;border-top:1px solid var(--line)}
+.head{max-width:60ch;margin-bottom:24px;display:grid;gap:8px}
+.head h2{font-size:clamp(28px,4vw,38px)}
+.head p{color:var(--muted)}
+.svc{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.svc article{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:20px;display:grid;gap:6px;align-content:start}
+.svc h3{font-size:20px}
+.svc p{color:var(--muted);font-size:15.5px}
+@media (max-width:860px){.svc{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:520px){.svc{grid-template-columns:1fr}}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:start}
+.two>*{min-width:0}
+@media (max-width:760px){.two{grid-template-columns:1fr}}
+table{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;font-variant-numeric:tabular-nums}
+th,td{text-align:left;padding:11px 14px;border-bottom:1px solid var(--line)}
+tr:last-child th,tr:last-child td{border-bottom:0}
+th{font-weight:600}
+.contact{display:grid;gap:10px;background:var(--soft);border-radius:var(--r);padding:20px;font-size:16px}
+form{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:22px;display:grid;gap:14px}
+.f2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media (max-width:520px){.f2{grid-template-columns:1fr}}
+label{display:grid;gap:6px;font-size:14.5px;font-weight:700}
+input,select,textarea{font:400 16px/1.4 var(--body);color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:10px 12px;width:100%}
+textarea{min-height:90px;resize:vertical}
+.err{color:#B3261E;font-size:14px;min-height:1.2em}
+@media (prefers-color-scheme: dark){.err{color:#FFB4AB}}
+.ok{background:var(--soft);border-radius:8px;padding:14px;font-size:15.5px}
+footer{border-top:1px solid var(--line);padding-block:28px;font-size:14.5px;color:var(--muted)}
+footer .wrap{display:grid;gap:8px}
+</style>
+</head>
+<body>
+<div class="demo-bar" role="note">Demo project — fictional business. Brightwater Family Dental does not exist. This site was built by <a href="https://freelance-site-silk-omega.vercel.app" target="_blank" rel="noopener">Manel Terrible, freelance web developer</a> to show what a small clinic website can look like.</div>
+
+<header>
+  <div class="wrap">
+    <a class="logo" href="#top">Brightwater <span>Family Dental</span></a>
+    <nav aria-label="Main">
+      <a href="#services">Services</a>
+      <a href="#hours">Hours</a>
+      <a href="#contact">Contact</a>
+      <a class="btn" href="#request">Request appointment</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="wrap hero">
+    <div>
+      <h1>Gentle, everyday dental care for the whole family.</h1>
+      <p class="lede">Checkups, cleanings and fillings close to home. Request a visit online and the front desk calls you back to confirm a time.</p>
+      <div class="acts">
+        <a class="btn" href="#request">Request an appointment</a>
+        <a class="btn ghost" href="#services">See services</a>
+      </div>
+    </div>
+    <aside class="quick" aria-label="Quick info">
+      <b>Quick info</b>
+      <dl>
+        <dt>Today</dt><dd id="today">See hours below</dd>
+        <dt>Phone</dt><dd>(555) 010-0142</dd>
+        <dt>Address</dt><dd>123 Example Street, Anytown, USA</dd>
+      </dl>
+      <p style="font-size:13.5px;color:var(--muted)">Placeholder details for a fictional demo.</p>
+    </aside>
+  </div>
+
+  <section id="services">
+    <div class="wrap">
+      <div class="head">
+        <h2>Services</h2>
+        <p>Plain-language descriptions, so patients know what to book.</p>
+      </div>
+      <div class="svc">
+        <article><h3>Checkups and cleanings</h3><p>A routine exam and cleaning, with time for your questions.</p></article>
+        <article><h3>Fillings</h3><p>Repairs for cavities and small chips, with tooth-colored material.</p></article>
+        <article><h3>Kids' visits</h3><p>Short, friendly first visits that help children get comfortable.</p></article>
+        <article><h3>Teeth whitening</h3><p>In-office whitening after a quick check that it suits you.</p></article>
+        <article><h3>Tooth pain visits</h3><p>Same-week appointments when something hurts.</p></article>
+        <article><h3>Night guards</h3><p>Custom guards for teeth grinding.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="hours">
+    <div class="wrap two">
+      <div>
+        <div class="head"><h2>Hours</h2><p>Times shown in the clinic's local time.</p></div>
+        <table aria-label="Opening hours">
+          <tbody id="hoursBody"></tbody>
+        </table>
+      </div>
+      <div id="contact">
+        <div class="head"><h2>Contact</h2><p>Every detail here is a placeholder for the demo.</p></div>
+        <div class="contact">
+          <div><b>Phone:</b> (555) 010-0142</div>
+          <div><b>Email:</b> hello@example.com</div>
+          <div><b>Address:</b> 123 Example Street, Anytown, USA</div>
+          <div><b>Parking:</b> Free lot behind the building</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="request">
+    <div class="wrap two">
+      <div class="head">
+        <h2>Request an appointment</h2>
+        <p>Tell us what you need and when you're free. The front desk replies within one business day to confirm.</p>
+        <p style="font-weight:700;color:var(--ink)">Demo form: nothing you enter is sent or stored.</p>
+      </div>
+      <form id="req" novalidate>
+        <div class="f2">
+          <label for="name">Full name<input id="name" autocomplete="name" required></label>
+          <label for="phone">Phone<input id="phone" type="tel" autocomplete="tel" required></label>
+        </div>
+        <label for="email">Email (optional)<input id="email" type="email" autocomplete="email"></label>
+        <div class="f2">
+          <label for="reason">Reason for visit
+            <select id="reason">
+              <option>Checkup and cleaning</option><option>Filling</option><option>Kids' visit</option>
+              <option>Teeth whitening</option><option>Tooth pain</option><option>Night guard</option><option>Other</option>
+            </select>
+          </label>
+          <label for="patient">New or returning?
+            <select id="patient"><option>New patient</option><option>Returning patient</option></select>
+          </label>
+        </div>
+        <div class="f2">
+          <label for="date">Preferred day<input id="date" type="date" required></label>
+          <label for="time">Preferred time
+            <select id="time"><option>Morning</option><option>Afternoon</option><option>Either</option></select>
+          </label>
+        </div>
+        <label for="notes">Anything we should know?<textarea id="notes"></textarea></label>
+        <p class="err" id="err" role="alert"></p>
+        <button class="btn" type="submit">Send request</button>
+        <div class="ok" id="ok" hidden role="status"></div>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><b>Demo project — fictional business.</b> Brightwater Family Dental, its address, phone number and email are made up. No real clinic is represented.</p>
+    <p>Designed and built by Manel Terrible, freelance web developer. Want a site like this for your business? <a href="https://freelance-site-silk-omega.vercel.app" target="_blank" rel="noopener">freelance-site-silk-omega.vercel.app</a></p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var hours = [["Monday","8:00 AM – 5:00 PM"],["Tuesday","8:00 AM – 5:00 PM"],["Wednesday","10:00 AM – 7:00 PM"],["Thursday","8:00 AM – 5:00 PM"],["Friday","8:00 AM – 2:00 PM"],["Saturday","9:00 AM – 1:00 PM"],["Sunday","Closed"]];
+  var tb = document.getElementById('hoursBody');
+  var jsDay = new Date().getDay(); var idx = (jsDay + 6) % 7;
+  hours.forEach(function(h, i){
+    var tr = document.createElement('tr');
+    var th = document.createElement('th'); th.scope = 'row'; th.textContent = h[0] + (i === idx ? ' (today)' : '');
+    var td = document.createElement('td'); td.textContent = h[1];
+    if (i === idx) { tr.style.background = 'var(--soft)'; }
+    tr.appendChild(th); tr.appendChild(td); tb.appendChild(tr);
+  });
+  document.getElementById('today').textContent = hours[idx][1];
+  var d = document.getElementById('date');
+  var t = new Date(); t.setDate(t.getDate() + 1); d.min = t.toISOString().slice(0,10);
+  document.getElementById('req').addEventListener('submit', function(e){
+    e.preventDefault();
+    var err = document.getElementById('err'), ok = document.getElementById('ok');
+    var name = document.getElementById('name').value.trim();
+    var phone = document.getElementById('phone').value.trim();
+    var email = document.getElementById('email').value.trim();
+    if (!name) { err.textContent = 'Please enter your name.'; return; }
+    if (phone.replace(/\D/g,'').length < 7) { err.textContent = 'Please enter a phone number so the front desk can call you back.'; return; }
+    if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { err.textContent = 'That email address looks incomplete. Fix it or leave it blank.'; return; }
+    if (!d.value) { err.textContent = 'Please choose a preferred day.'; return; }
+    err.textContent = '';
+    ok.textContent = 'Thanks, ' + name.split(' ')[0] + '. On a real clinic site, this request (' + document.getElementById('reason').value.toLowerCase() + ', ' + d.value + ', ' + document.getElementById('time').value.toLowerCase() + ') would go to the front desk. This is a demo, so nothing was sent or saved.';
+    ok.hidden = false;
+  });
+})();
+</script>
+</body>
+</html>
